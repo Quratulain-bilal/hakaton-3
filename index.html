@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Dynamic Resume Made By Quratulain Shah</h1>
+    <form id="resumeForm">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required><br>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required><br>
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" required><br>
+        <!-- Profile Picture Upload Section -->
+    
+            <label for="profilePic">Upload Profile Picture</label>
+            <input type="file" id="profilePic" name="profilePic" accept="image/*"><br>
+        
+
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Education</legend>
+            <label for="education">Education</label>
+            <textarea id="education" name="education" rows="4" required></textarea><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Experience</legend>
+            <label for="experience">Experience</label>
+            <textarea id="experience" name="experience" rows="4" required></textarea><br>
+        </fieldset>
+
+        <fieldset id="skillsSection">
+            <legend>Skills</legend>
+            <label for="skills">Skills</label>
+            <textarea id="skills" name="skills" rows="4" required></textarea><br>
+        </fieldset>
+
+        <!-- Download URL Section -->
+        <label for="downloadUrl">Download URL</label>
+        <input type="url" id="downloadUrl" name="downloadUrl" placeholder="Enter download link" required><br>
+
+        <!-- Image Preview (Render under the URL section) -->
+        <img id="imagePreview" src="" alt="Profile Picture Preview" style="max-width: 200px; margin-top: 10px; display: none;">
+
+        <!-- Button to toggle skills visibility -->
+        <button type="button" id="toggleSkills">Hide Skills Section</button>
+
+        <button type="submit">Generate Resume Below</button>
+    </form>
+
+    <!-- Div to display the generated resume -->
+    <div id="resumeOutput"></div>
+
+    <!-- Download button -->
+    <a id="downloadResume" href="#" style="display:none;" target="_blank">Click to Download Resume</a>
+
+    <script src="form.js"></script>
+</body>
+</html>
